@@ -1,4 +1,4 @@
- <?php
+<?php
   include('header.php');
   require('UserValidator.php');
   require('User.php');
@@ -24,16 +24,6 @@
 			<?php echo $message??''; ?>
 		</div>
 		<form method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>" class="">
-			<label>Name: </label><br>
-			<input  type="text" name="username" id="username" value="<?php echo htmlspecialchars($_POST['username']?? ' ') ?>"><br>
-			<div class="error">
-				<?php echo $error['username']?? '';  ?>
-			</div>
-			<label>Email: </label><br>
-			<input type="text" name="email" id="email" value="<?php echo htmlspecialchars($_POST['email']??'')?>"><br>
-			<div class="error">
-				<?php echo $error['email']?? '';  ?>
-			</div>
 			<label>Password: </label><br>
 			<input type="text" name="password" id="password" value="<?php echo htmlspecialchars($_POST['password']?? '') ?>"><br>
 			<div class="error">
@@ -46,8 +36,6 @@
 			</div><br>
 			<input type="submit" name="reg"  id="reg" value="Submit">
 		</form>
-		<a href="signin.php">Signin</a>
-		<p>&nbsp</p>
 	</div>
 	</body>
 </html>
